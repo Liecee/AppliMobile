@@ -1,32 +1,21 @@
+import 'package:applimobile/home.dart';
+
 import 'package:flutter/material.dart';
+import 'home.dart';
 
-import 'homepage.dart';
-
-void main() => runApp(
-      MyApp(),
-    );
-
-class MyApp extends StatefulWidget {
-  const MyApp({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  _MyAppState createState() => _MyAppState();
+void main() {
+  runApp(MyApp());
 }
 
-class _MyAppState extends State<MyApp> {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Flutter Demo',
       theme: ThemeData(
-        brightness: Brightness.light, //couleur thème light
+        primarySwatch: Colors.green,
       ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark, //couleur thème dark
-      ),
-      themeMode: ThemeMode.dark, //thème par défaut
-      home: HomePage(),
+      home: HomeScreen(),
     );
   }
 }

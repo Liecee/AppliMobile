@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
+class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,19 +23,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
 
-            Container(
-              padding: EdgeInsets.only(top: 20, bottom: 20),
-              child: Center(
-                child: Text(
-                  'Choisissez une catégorie : ',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontFamily: 'alamain1',
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            ),
+            CustomButton(),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 65),
               child: ElevatedButton(
@@ -109,6 +97,29 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class CustomButton extends StatelessWidget {
+  const CustomButton({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.only(top: 20, bottom: 20),
+      child: Center(
+        child: Text(
+          'Choisissez une catégorie : ',
+          style: TextStyle(
+            fontSize: 24,
+            fontFamily: 'alamain1',
+            color: Colors.white,
+          ),
         ),
       ),
     );

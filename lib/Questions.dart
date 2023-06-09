@@ -1,17 +1,11 @@
-import 'package:applimobile/Routage.dart';
-
 import 'package:flutter/material.dart';
 
-class Questions extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // Code de construction de la page de questions
+class Questions {
+  String question;
+  Map<String, bool> reponse;
 
-    return Container(
-        // Contenu de la page de questions
-        );
+  Questions({String q, Map<String, bool> r = const <String, bool>{}}) {
+    question = q;
+    reponse = r;
   }
-
-  // Code de la page de questions
-
 }

@@ -1,6 +1,17 @@
+import 'package:applimobile/Questions.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
+  final List<Questions> list = [
+    Questions(
+        q: 'La capitale de la France est Paris',
+        r: new Map()
+          ..putIfAbsent('Paris', () => true)
+          ..putIfAbsent('Lyon', () => false)
+          ..putIfAbsent('Marseille', () => false)
+          ..putIfAbsent('Toulouse', () => false)
+          ..putIfAbsent('Bordeaux', () => false)),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(

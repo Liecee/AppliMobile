@@ -72,7 +72,6 @@ class Home extends StatelessWidget {
 
             // Troisieme bouton
 
-            // Deuxieme bouton
             SizedBox(
               height: 35,
             ),

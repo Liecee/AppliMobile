@@ -1,4 +1,5 @@
 import 'package:applimobile/home.dart';
+import 'package:applimobile/Routage.dart';
 
 import 'package:flutter/material.dart';
 import 'home.dart';
@@ -15,7 +16,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: HomeScreen(),
+      home: Home(),
+      routes: {
+        Routage.home: (context) => Home(),
+      },
     );
   }
 }

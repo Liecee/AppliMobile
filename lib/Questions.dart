@@ -1,11 +1,10 @@
-import 'package:flutter/material.dart';
-
+import '../main.dart';
 class Questions {
   String question;
   Map<String, bool> reponse;
 
-  Questions({String q, Map<String, bool> r = const <String, bool>{}}) {
-    question = q;
-    reponse = r;
-  }
+  Questions({required this.question, required this.reponse});
+
+  
+  
 }

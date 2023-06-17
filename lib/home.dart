@@ -3,14 +3,54 @@ import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
   final List<Questions> list = [
-    Questions(
-        q: 'La capitale de la France est Paris',
-        r: new Map()
-          ..putIfAbsent('Paris', () => true)
-          ..putIfAbsent('Lyon', () => false)
-          ..putIfAbsent('Marseille', () => false)
-          ..putIfAbsent('Toulouse', () => false)
-          ..putIfAbsent('Bordeaux', () => false)),
+    Questions(question: "Quel est la capital du Pérou?", reponse: {
+      "Arequipa": false,
+      "Lima": true,
+      "Trujillo": false,
+      "Chiclayo": false,
+    }), 
+
+    Questions(question: "Quel est la capital du Brésil ?", reponse: {
+      "Salvador": false,
+      "Rio de Janeiro": false,
+      "Brasília": true,
+      "São Paulo": false,
+    }),
+
+    Questions(question: "Quel est la capital de l'Argentine ?", reponse: {
+      "Buenos Aires": true,
+      "Córdoba": false,
+      "Rosario": false,
+      "Mendoza": false,
+    }),
+
+    Questions(question: "Quel est la capital de la Colombie ?", reponse: {
+      "Bogotá": true,
+      "Medellín": false,
+      "Cali": false,
+      "Barranquilla": false,
+    }),
+
+    Questions(question: "Quel est la capital de l'Équateur ?", reponse: {
+      "Guayaquil": false,
+      "Quito": true,
+      "Cuenca": false,
+      "Santo Domingo": false,
+    }),
+
+    Questions(question: "Quel est la capital du Chili ?", reponse: {
+      "Santiago": true,
+      "Valparaíso": false,
+      "Concepción": false,
+      "La Serena": false,
+    }),
+
+    Questions(question: "Quel est la capital du Venezuela ?", reponse: {
+      "Maracaibo": false,
+      "Caracas": true,
+      "Valencia": false,
+      "Barquisimeto": false,
+    }),
   ];
   @override
   Widget build(BuildContext context) {
@@ -38,8 +78,8 @@ class Home extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 65),
               child: ElevatedButton(
-                onLongPress: () {},
                 style: ElevatedButton.styleFrom(
+                
                   primary: Colors.white,
                   onPrimary: Colors.blue,
                   shape: RoundedRectangleBorder(
@@ -52,9 +92,15 @@ class Home extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
                         fontFamily: 'alamain1')),
-                onPressed: () {},
-              ),
+                onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Home()   )
+                );
+              },
             ),
+              ),
+            
 
             // Deuxieme bouton
             SizedBox(
@@ -114,9 +160,7 @@ class Home extends StatelessWidget {
 }
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({
-    Key key,
-  }) : super(key: key);
+  const CustomButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -134,4 +178,6 @@ class CustomButton extends StatelessWidget {
       ),
     );
   }
+
+  
 }

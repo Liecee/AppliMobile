@@ -194,10 +194,11 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('QuizzApp'),
+        
+        title: Text('Bienvenue - QuizzApp '),
       ),
       body: Container(
-        padding: EdgeInsets.all(16),
+        padding: EdgeInsets.all(24),
         alignment: Alignment.center,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -205,7 +206,7 @@ class Home extends StatelessWidget {
             Text(
               'Choisissez une catégorie :',
               style: TextStyle(
-                fontSize: 28,
+                fontSize: 34,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -229,7 +230,7 @@ class Home extends StatelessWidget {
               },
               child: Text(
                 'Capitales',
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: 28),
               ),
             ),
             SizedBox(height: 16),
@@ -252,7 +253,7 @@ class Home extends StatelessWidget {
               },
               child: Text(
                 'Véhicules',
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: 28),
               ),
             ),
             SizedBox(height: 16),
@@ -275,7 +276,7 @@ class Home extends StatelessWidget {
               },
               child: Text(
                 'Arts modernes',
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(fontSize: 28),
               ),
             ),
           ],

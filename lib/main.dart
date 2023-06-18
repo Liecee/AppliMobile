@@ -14,7 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Appli Mobile',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.blue,
+        fontFamily: 'Dacherry',
+      
+
       ),
       home: Home(),
       routes: {
